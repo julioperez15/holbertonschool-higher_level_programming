@@ -1,4 +1,4 @@
-#usr/nin/env/python3
+#!/usr/bin/python3
 #0-print_list_integer.py
 ## Julio Perez <9034@holbertonschool.com>
 

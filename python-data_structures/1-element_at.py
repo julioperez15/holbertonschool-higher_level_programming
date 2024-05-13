@@ -1,4 +1,4 @@
-#usr/nin/env/python3
+#!/usr/bin/python3
 #1-element_at.py
 ## Julio Perez <9034@holbertonschool.com>
 
