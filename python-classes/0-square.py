@@ -9,5 +9,4 @@ This module demosntrates the creation of an empty class in Python.
 
 
 class Square:
-    pass
     """This is an empty class that defines a square."""
