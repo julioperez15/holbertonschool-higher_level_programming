@@ -2,4 +2,3 @@
 """Module that defines a class"""
 class Rectangle :
     """an empty class"""
-    pass
