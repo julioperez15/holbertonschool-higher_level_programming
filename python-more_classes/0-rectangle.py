@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+
+
 """Module that defines a class"""
-class Rectangle :
+class Rectangle:
     """an empty class"""
