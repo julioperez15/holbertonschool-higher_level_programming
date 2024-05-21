@@ -1,0 +1,23 @@
+The "add_integer" doctest
+======================
+Tests the add_integer function from 0-add_integer
+for any edge cases that may break the functionality
+of the imported function
+
+>>> add_integer = __import__('0-add_integer').add_integer
+>>> add_integer(1, 2)
+3
+>>> add_integer(100, -2)
+98
+>>> add_integer(100.3, -2)
+98
+>>> add_integer(0, 0)
+0
+>>> add_integer(4, "School")
+Traceback (most recent call last):
+...
+TypeError: a must be an integer or b must be an add_integer
+>>> add_integer("School", 4)
+Traceback (most recent call last):
+    ...
+TypeError: a must be an integer or b must be an integer
