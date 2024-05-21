@@ -1,0 +1,26 @@
+>>> add_integer = __import__('0-add_integer').add_integer
+>>> add_integer(2,3)
+5
+>>> add_integer(5,5)
+10
+
+>>> add_integer(100.3, -2)
+98
+>>> add_integer(5, "1")
+Traceback (most recent call last):
+TypeError: b must be an integer
+>>> add_integer(9, )
+107
+>>> add_integer(0, {})
+Traceback (most recent call last):
+TypeError: b must be an integer
+>>> add_integer(None)
+Traceback (most recent call last):
+TypeError: a must be an integer
+>>> add_integer()
+Traceback (most recent call last):
+TypeError: add_integer() missing 1 required positional argument: 'a'
+
+>>> add_integer(8, float('nan'))
+Traceback (most recent call last):
+ValueError: cannot convert float NaN to integer
