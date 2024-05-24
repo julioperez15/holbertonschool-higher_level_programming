@@ -1,16 +1,15 @@
-#!/usr/bin/env python3
-
-
 from abc import ABC, abstractmethod
-
 
 class Shape(ABC):
     @abstractmethod
     def area(self):
+        pass
+        
+    @abstractmethod
     def perimeter(self):
         pass
 
-class Circle:
+class Circle(Shape):
     def __init__(self, radius):
         self.radius = radius
 
@@ -21,7 +20,7 @@ class Circle:
         return 2 * 3.14159 * self.radius
 
 
-class Rectangle:
+class Rectangle(Shape):
     def __init__(self, width, height):
         self.width = width
         self.height = height
@@ -34,5 +33,7 @@ class Rectangle:
 
 
 def shape_info(shape):
+    if not isinstance(shape, Shape):
+        raise TypeError("shape must be an instance of Shape")
     print(f"Area: {shape.area()}")
     print(f"Perimeter: {shape.perimeter()}")
