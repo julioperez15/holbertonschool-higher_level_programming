@@ -1,10 +1,9 @@
-#!/usr/bin/python3
-
-
-import math
+#!/usr/bin/env python3
 from abc import ABC, abstractmethod
+import math
 
-class Shape(ABC):
+
+class Shape:
     @abstractmethod
     def area(self):
         pass
@@ -12,18 +11,18 @@ class Shape(ABC):
     @abstractmethod
     def perimeter(self):
         pass
+
 
 class Circle(Shape):
     def __init__(self, radius):
-        if radius < 0:
-            raise ValueError("Radius cannot be negative")
         self.radius = radius
 
     def area(self):
-        return math.pi * (self.radius ** 2)
+        return math.pi * self.radius ** 2
 
     def perimeter(self):
-        return 2 * math.pi * self.radius
+        return 2 * math.pi * abs(self.radius)
+
 
 class Rectangle(Shape):
     def __init__(self, width, height):
@@ -36,8 +35,7 @@ class Rectangle(Shape):
     def perimeter(self):
         return 2 * (self.width + self.height)
 
+
 def shape_info(shape):
-    if not isinstance(shape, Shape):
-        raise TypeError("shape must be an instance of Shape")
     print(f"Area: {shape.area()}")
     print(f"Perimeter: {shape.perimeter()}")
