@@ -1,10 +1,12 @@
+#!/usr/bin/python3
+
 from abc import ABC, abstractmethod
 
 class Shape(ABC):
     @abstractmethod
     def area(self):
         pass
-        
+
     @abstractmethod
     def perimeter(self):
         pass
@@ -37,3 +39,4 @@ def shape_info(shape):
         raise TypeError("shape must be an instance of Shape")
     print(f"Area: {shape.area()}")
     print(f"Perimeter: {shape.perimeter()}")
+
