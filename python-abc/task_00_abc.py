@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 
-rom abc import ABC, abstractmethod
+from abc import ABC, abstractmethod
 
 
 class Animal(ABC):
