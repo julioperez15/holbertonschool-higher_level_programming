@@ -1,4 +1,3 @@
-# Use alpine image
 # Usa una imagen base, por ejemplo, una imagen de Ubuntu
 FROM ubuntu:latest
 
