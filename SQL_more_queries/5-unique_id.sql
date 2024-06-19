@@ -1,4 +1,4 @@
--- Creates table unique_id in server
+-- Creates table unique-id in server
 --fields id and name
 CREATE TABLE IF NOT EXISTS unique_id (
     'id' INT DEFAULT 1 UNIQUE,
