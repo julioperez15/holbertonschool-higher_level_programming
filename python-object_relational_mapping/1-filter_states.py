@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""script that lists all states from the database"""
+"""script that lists all states with a name starting with N"""
 
 
 import MySQLdb
@@ -14,13 +14,12 @@ if __name__ == "__main__":
                          passwd=password, db=database_name)
 
     cur = db.cursor()
-
-    cur.execute("SELECT * FROM states ORDER BY states.id ASC")
-
+    cur.execute(
+        "SELECT * FROM states WHERE name LIKE BINARY 'N%' "
+        "ORDER BY states.id ASC"
+    )
     rows = cur.fetchall()
-
     for row in rows:
         print(row)
-
     cur.close()
     db.close()
